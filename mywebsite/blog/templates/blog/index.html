@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta http-equip="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="% static 'css/style.css' %">
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
         <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
         
         <title>STATIC FILE DJANGO PYTHON</title>
@@ -24,11 +24,21 @@
         {% endblock header %} {% endcomment %}
 
 
+     
+         <h1 id= "judul" >Hi, This's new Project by 1204053_Resa Rianti </h1> 
+         <h1 id="judul2" > Hi, This is Picture of Django !! </h1> 
+         <h2 id="h2" > Django was created in the fall of 2002 </h2> 
+         <h3 id="isi" > Django is a lightweight and standalone web server for development and testing </h3> 
+         <a id="link" href="https://www.djangoproject.com/" >Now Lets Roll !</a>
+
+         <br>
+         <br>
+
         <center>
-         <h2> SELAMAT DATANG </h2> 
-        
-        <img src="{% static 'img/pantai.jpg' %}">
+        <img  class="container" src="{% static 'img/beach.jpg' %}">
         </center>
+       
+      
         
         <script>src="{% static 'vendor/jquery/jquery.js' %}"</script>
         <script>src="{% static 'vendor/popper/popper.js' %}"</script>
