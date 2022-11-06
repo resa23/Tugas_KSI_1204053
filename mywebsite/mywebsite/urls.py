@@ -15,8 +15,8 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, include
-# from django.http import HttpResponse
+from django.urls import path, include, re_path
+from django.http import HttpResponse
 
 from blog.views import index
 
@@ -26,8 +26,12 @@ from . import views
 #         return HttpResponse('Hello World !')
 
 urlpatterns = [
-    path('blog/', include('blog.urls')),
+    path('admin/', admin.site.urls),
+    path('blog/', include('blog.urls', namespace='blog')),
     path('', views.index),
-    path('about/',views.about),
-    path('',index),
+    path('',views.about, name='about'),
+    path('',index, name='index'),
+    re_path(r'^articles/(?P<year>[0-9]{4})/$', views.articles, name='dinamis'),
 ]
+
+
